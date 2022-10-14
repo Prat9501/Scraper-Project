@@ -3,6 +3,8 @@
 # dependencies
 env
 frontend/crypto-app/node_modules
+backend/crypto/__pycache__/
+backend/scraper/__pycache__/
 /node_modules
 /.pnp
 .pnp.js

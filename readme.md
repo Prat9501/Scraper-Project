@@ -13,6 +13,13 @@ Backend Commands Used
 - `python manage.py migrate`
 - `python manage.py runserver`
 
+For update of crypto prices after every 5 sec I have implemented task queue with `redis` and task worker using `celery`. To send task to task queue from django i have used `celery-beat`. 
+Run following commands in terminal to start services:
+    - redis-server
+    - celery -A scraper.celery worker --pool=solo -l info
+    - celery -A scraper beat -l INFO
+
+Created Django Rest API to read data from database and serializer to send JSON data to frontend.
 
 Frontend Commands
 ---
